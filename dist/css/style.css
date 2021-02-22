@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: black;
+  color: white;
+}
+
+main {
+  background-image: url("../img/bg-painter-home.jpg");
+  height: 600px;
+  background-size: cover;
+}
