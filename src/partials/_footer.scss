@@ -1,0 +1,29 @@
+footer {
+  .top {
+    @include container;
+    padding: $s-100;
+    background-color: $l-grey;
+    ul {
+
+      @include flex(space-between);
+    }
+  }
+  .bottom {
+    background-color: $black;
+    @include container;
+    ul{
+      height: $s-100;
+      @include flex(flex-end);
+      li {
+        margin: 0 $s-10;
+        color: $white;
+        a {
+          color: $grey;
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

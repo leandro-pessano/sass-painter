@@ -3,8 +3,9 @@
     width: 70%;
     margin: 0 auto;
   }
+}
 
-  @mixin flex($justify:space-between, $align:center){
+@mixin flex($justify:flex-start, $align:center){
   display: flex;
   justify-content: $justify;
   align-items: $align;

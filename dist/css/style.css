@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 14px;
 }
 
 ul {
@@ -12,13 +13,152 @@ a {
   text-decoration: none;
 }
 
-header {
+.btn {
+  text-transform: uppercase;
+  padding: 10px calc(20px);
+  font-size: calc(20px);
+  cursor: pointer;
+}
+
+.btn-1 {
+  text-align: center;
+  width: 180px;
   background-color: black;
   color: white;
 }
 
+.btn-2 {
+  text-align: center;
+  width: 240px;
+  border: 2px solid black;
+}
+
+header {
+  background-color: black;
+}
+header .container {
+  width: 70%;
+  margin: 0 auto;
+}
+header .top ul {
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .top ul i {
+  color: lightblue;
+}
+header .top ul a {
+  color: grey;
+  margin-left: 10px;
+  margin-right: calc(30px);
+}
+header .bottom ul {
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+header .bottom ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 10px;
+  padding: 0 calc(20px);
+  height: 100%;
+}
+header .bottom ul li a {
+  color: white;
+}
+header .bottom ul li:hover:not(:first-child) {
+  background-color: white;
+}
+header .bottom ul li:hover:not(:first-child) a {
+  color: black;
+}
+header .bottom ul li:first-child {
+  margin-bottom: 10px;
+}
+header .bottom ul li:first-child a {
+  margin: 0;
+  font-size: calc(30px);
+}
+header .bottom ul li:first-child {
+  padding: 0;
+}
+
 main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   background-image: url("../img/bg-painter-home.jpg");
-  height: 600px;
+  height: 480px;
+  background-position: bottom;
   background-size: cover;
+}
+main .container {
+  width: 70%;
+  margin: 0 auto;
+}
+main span:first-child {
+  font-size: calc(60px);
+}
+main span:first-child span {
+  font-size: calc(40px);
+}
+main p {
+  margin: calc(20px) 0;
+  max-width: 50%;
+  line-height: 1.6;
+  font-size: calc(20px + 5px);
+}
+main .offer, main .offer p {
+  margin: 0;
+  color: violet;
+  font-size: calc(20px);
+}
+main .buttons {
+  margin-top: calc(20px);
+  max-width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .top {
+  padding: 100px;
+  background-color: lightgrey;
+}
+footer .top .container {
+  width: 70%;
+  margin: 0 auto;
+}
+footer .top ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .bottom {
+  background-color: black;
+}
+footer .bottom .container {
+  width: 70%;
+  margin: 0 auto;
+}
+footer .bottom ul {
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+footer .bottom ul li {
+  margin: 0 10px;
+  color: white;
+}
+footer .bottom ul li a {
+  color: grey;
+}
+footer .bottom ul li a:hover {
+  color: white;
 }

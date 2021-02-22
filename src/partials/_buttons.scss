@@ -1,0 +1,19 @@
+.btn {
+  text-transform: uppercase;
+  padding: $s-10 calc(#{$s-10*2});
+  font-size: calc(#{$s-10*2});
+  cursor: pointer;
+}
+
+.btn-1 {
+  text-align: center;
+  width: 180px;
+  background-color: $black;
+  color: $white;
+}
+
+.btn-2 {
+  text-align: center;
+  width: 240px;
+  border: 2px solid $black;
+}

@@ -1,7 +1,45 @@
 header {
+  @include container;
   background-color: $black;
-  .top, .bottom {
-    @include container;
-    height: $-50;
+  .top ul {
+    height: $s-40;
+    @include flex(flex-end);
+    i {
+      color: $l-blue;
+    }
+    a {
+      color: $grey;
+      margin-left: $s-10;
+      margin-right: calc(#{$s-10 * 3});
+    }
+  }
+  .bottom ul {
+    height: $s-40;
+    @include flex();
+    li {
+      @include flex();
+      margin: 0 $s-10;
+      padding: 0 calc(#{$s-10 *2});
+      height: 100%;
+      a {
+        color: $white;
+      }
+      &:hover:not(:first-child) {
+        background-color: $white;
+        a {
+          color: $black;
+        }
+      }
+      &:first-child {
+        margin-bottom: $s-10;
+        a {
+          margin: 0;
+          font-size: calc(#{$s-10 * 3});
+        }
+      }
+      &:first-child{
+        padding: 0;
+      }
+    }
   }
 }

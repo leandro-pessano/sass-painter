@@ -1,5 +1,30 @@
 main {
+  @include flex;
   background-image: url('../img/bg-painter-home.jpg');
-  height: 600px;
+  height: 480px;
+  background-position: bottom;
   background-size: cover;
+  @include container;
+  span:first-child {
+    font-size: calc(#{$s-10 *6});
+    span {
+      font-size: calc(#{$s-10 *4});
+    }
+  }
+  p {
+    margin: calc(#{$s-10*2}) 0;
+    max-width: 50%;
+    line-height: 1.6;
+    font-size: calc(#{$s-10*2} + #{$s-5});
+  }
+  .offer, .offer p {
+    margin: 0;
+    color: $violet;
+    font-size: calc(#{$s-10*2});
+  }
+  .buttons {
+    margin-top: calc(#{$s-10*2});
+    max-width: 40%;
+    @include flex(space-between)
+  }
 }
