@@ -3,9 +3,22 @@ footer {
     @include container;
     padding: $s-100;
     background-color: $l-grey;
-    ul {
-
+    .container {
       @include flex(space-between);
+    }
+    ul {
+      @include flex(space-between);
+      flex-direction: column;
+      li {
+        line-height: 2;
+        color: $grey;
+        cursor: pointer;
+        &:first-child {
+          color: $black;
+          font-size: 16px;
+          margin-bottom: $s-5;
+        }
+      }
     }
   }
   .bottom {

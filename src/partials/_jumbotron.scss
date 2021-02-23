@@ -6,9 +6,9 @@ main {
   background-size: cover;
   @include container;
   span:first-child {
-    font-size: calc(#{$s-10 *6});
+    font-size: calc(#{$s-10 *7});
     span {
-      font-size: calc(#{$s-10 *4});
+      font-size: calc(#{$s-10 *3});
     }
   }
   p {

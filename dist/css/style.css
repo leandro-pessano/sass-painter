@@ -2,7 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 12px;
+}
+
+body {
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 ul {
@@ -33,11 +37,40 @@ a {
   border: 2px solid black;
 }
 
+li.parent-dropdown {
+  position: relative;
+}
+li.parent-dropdown .dropdown {
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-color: white;
+  display: none;
+}
+li.parent-dropdown .dropdown ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+li.parent-dropdown .dropdown ul li {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+li.parent-dropdown .dropdown ul li:hover {
+  background-color: lightgrey;
+}
+li.parent-dropdown:hover .dropdown {
+  display: block;
+}
+
 header {
   background-color: black;
 }
 header .container {
-  width: 70%;
+  width: 75%;
   margin: 0 auto;
 }
 header .top ul {
@@ -46,21 +79,25 @@ header .top ul {
   justify-content: flex-end;
   align-items: center;
 }
+header .top ul li:hover a {
+  color: white;
+  text-decoration: underline;
+}
 header .top ul i {
-  color: lightblue;
+  color: #009CFF;
 }
 header .top ul a {
   color: grey;
   margin-left: 10px;
   margin-right: calc(30px);
 }
-header .bottom ul {
-  height: 40px;
+header .bottom > ul {
+  height: calc(50px);
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-header .bottom ul li {
+header .bottom > ul > li {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -68,24 +105,24 @@ header .bottom ul li {
   padding: 0 calc(20px);
   height: 100%;
 }
-header .bottom ul li a {
+header .bottom > ul > li a {
+  font-size: 14px;
   color: white;
 }
-header .bottom ul li:hover:not(:first-child) {
+header .bottom > ul > li:hover:not(:first-child) {
   background-color: white;
+  cursor: pointer;
 }
-header .bottom ul li:hover:not(:first-child) a {
+header .bottom > ul > li:hover:not(:first-child) a {
   color: black;
 }
-header .bottom ul li:first-child {
+header .bottom > ul > li:first-child {
+  padding: 0;
   margin-bottom: 10px;
 }
-header .bottom ul li:first-child a {
+header .bottom > ul > li:first-child a {
   margin: 0;
   font-size: calc(30px);
-}
-header .bottom ul li:first-child {
-  padding: 0;
 }
 
 main {
@@ -98,14 +135,14 @@ main {
   background-size: cover;
 }
 main .container {
-  width: 70%;
+  width: 75%;
   margin: 0 auto;
 }
 main span:first-child {
-  font-size: calc(60px);
+  font-size: calc(70px);
 }
 main span:first-child span {
-  font-size: calc(40px);
+  font-size: calc(30px);
 }
 main p {
   margin: calc(20px) 0;
@@ -115,7 +152,7 @@ main p {
 }
 main .offer, main .offer p {
   margin: 0;
-  color: violet;
+  color: #c70cb9;
   font-size: calc(20px);
 }
 main .buttons {
@@ -131,19 +168,35 @@ footer .top {
   background-color: lightgrey;
 }
 footer .top .container {
-  width: 70%;
+  width: 75%;
   margin: 0 auto;
+}
+footer .top .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 footer .top ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+}
+footer .top ul li {
+  line-height: 2;
+  color: grey;
+  cursor: pointer;
+}
+footer .top ul li:first-child {
+  color: black;
+  font-size: 16px;
+  margin-bottom: 5px;
 }
 footer .bottom {
   background-color: black;
 }
 footer .bottom .container {
-  width: 70%;
+  width: 75%;
   margin: 0 auto;
 }
 footer .bottom ul {
