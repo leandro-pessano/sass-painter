@@ -169,6 +169,59 @@ main .buttons {
   align-items: center;
 }
 
+section {
+  position: relative;
+  text-align: center;
+  background-color: #cdcdcd;
+}
+section .container {
+  width: 75%;
+  margin: 0 auto;
+}
+section h2 {
+  font-size: 30px;
+  padding: 50px 0 30px;
+  font-weight: normal;
+}
+section .container {
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .container > div {
+  width: 32%;
+  height: 400px;
+  background-color: white;
+  cursor: pointer;
+}
+section .container > div img {
+  display: inline-block;
+  width: 100%;
+}
+section .container > div div {
+  padding: 20px;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+section .container > div div span {
+  font-size: 24px;
+}
+section .container > div div p {
+  font-size: 18px;
+}
+section .container > div div small {
+  font-size: 14px;
+  color: #009CFF;
+}
+section .container > div div:hover small {
+  text-decoration: underline;
+}
+
 footer .top {
   padding: 100px;
   background-color: lightgrey;
