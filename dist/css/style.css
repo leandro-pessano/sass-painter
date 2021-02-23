@@ -30,11 +30,17 @@ a {
   background-color: black;
   color: white;
 }
+.btn-1:hover {
+  background-color: #333333;
+}
 
 .btn-2 {
   text-align: center;
   width: 240px;
   border: 2px solid black;
+}
+.btn-2:hover {
+  color: #333333;
 }
 
 li.parent-dropdown {
@@ -191,6 +197,10 @@ footer .top ul li:first-child {
   color: black;
   font-size: 16px;
   margin-bottom: 5px;
+}
+footer .top ul li:hover:not(:first-child) {
+  color: #4d4d4d;
+  text-decoration: underline;
 }
 footer .bottom {
   background-color: black;

@@ -18,6 +18,10 @@ footer {
           font-size: 16px;
           margin-bottom: $s-5;
         }
+        &:hover:not(:first-child) {
+          color: darken($grey, 20%);
+          text-decoration: underline;
+        }
       }
     }
   }
